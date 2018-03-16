@@ -1,0 +1,59 @@
+# Design of Arm  
+
+## Introduction 
+ 
+Our Project introductions states that we will make an arm with at least 5 degrees of freedom, since we were given only 7 servos (one of which is required for the gripper) we decided to make an arm with exactly 5 degrees of freedom using two motors for the first limb to guarantee it will be able to support the maximum load.  
+We also decided to have as much of our arm laser cut to reduce production time and cost.  
+
+## Base
+
+The base will be comprised of many bodies, a base lower, a base upper, and the supports to connect the two. The base upper will need to connect the first servo which will provide base rotation to the Base rotation plate.  
+
+In base upper we can see that it has a cutout with screw holes to connect the servo which will sit underneath the base upper body. We also see the cutouts for the supports.  
+The base lower is the same size as base upper but without the cutout for a servo, we can see this has support cutouts to mirror base upper.  
+The 13 supports are identical rectangular beams which connect into the cutouts of base upper and base lower. I used the circular pattern tool to get even spacing between the supports.  
+Below is an screenshot of the assembled base in fusion 360.  
+
+![Image of BASE](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/Base.png "Image of BASE")
+
+## Base rotation plate
+
+The base roation plate sits above the base and is roated by the servo fitted to the base, this then connects to the servos that move the first limb of the robot, since this component needs to connect to two servos almost 100mm apart we decided to 3D print as it would allows us a more complex shape.  
+
+Image of Base rotation plate
+
+## 1st Limb
+
+The first limb consists of 3 bodies, two large bodies and a structural support to connect them and reduce any torsion it may experience.  
+
+![Image of 1st limb](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/LIMB1.png "Image of 1st limb")
+
+## 2nd Limb
+
+The second limb attached directly after the first limb has two servos one to move itself and one to move the gripper attacher.  
+
+![Image of second limb](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/LIMB2.png "Image of second limb")
+
+## Gripper Attacher
+
+The gripper attacher connects to the end of the limb two and provides the rotation for the gripper itself. the lower end connects to the servo from the second limb and the upper end holds a servo which will be connected to the gripper. The gripper attacher is also where the component holding the camerra will be connected, for this component we decided to re purpose one of the heads from the robot football player and utilise its built in camera for our visual tracking.   
+
+![Image of gripper attacher](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/Gripper_Attacher.png "Image of gripper attacher")
+
+The head that will be attached to this componets is shown below.  
+
+Image of HEAD.
+
+## Gripper
+
+We decided on using 3 prongs rather than 2 as this would provide a better grip for the balls which we intend on coding the arm to collect.  
+To accompish this we needed a mechanical system that would allow one servo to rotate 3 gears at 120 degreee angles to each other. To acheice this we decided to use a rack and pinion system.  
+Due to the complexity of this components we had to 3D print.  
+
+Below is an image of the rack and pinion system we designed in fusion.  
+
+![Image of rack and pinion](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/RackAndPinion.png "Image of rack and pinion")
+
+this will be fitted to the main gripper case which will then attach to the gripper attacher. The gripper case needed to hold all the gears whilst allowing them to rotate freely, We decided to attach one gear directly to the servo which would then be held by the gripper case, this is shown in the image below.  
+
+![Image of gripper structure](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/GripperStructure.png "Image of gripper structure")

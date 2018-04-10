@@ -36,11 +36,11 @@ The second limb attached directly after the first limb has two servos one to mov
 
 ## Gripper Attacher
 
-The gripper attacher connects to the end of the limb two and provides the rotation for the gripper itself. the lower end connects to the servo from the second limb and the upper end holds a servo which will be connected to the gripper. The gripper attacher is also where the component holding the camerra will be connected, for this component we decided to re purpose one of the heads from the robot football player and utilise its built in camera for our visual tracking.   
+The gripper attacher connects to the end of the limb two and provides the rotation for the gripper itself. the lower end connects to the servo from the second limb and the upper end holds a servo which will be connected to the gripper.  
 
 ![Image of gripper attacher](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/Gripper_Attacher.PNG "Image of gripper attacher")
 
-The head that will be attached to this componets is shown below.  
+The gripper attacher is also where the component holding the camera will be connected, for this component we decided to re purpose one of the heads from the robot football player and utilise its built in camera for our visual tracking. The head that will be attached to this componets is shown below.  
 
 Image of HEAD.
 
@@ -57,3 +57,15 @@ Below is an image of the rack and pinion system we designed in fusion.
 this will be fitted to the main gripper case which will then attach to the gripper attacher. The gripper case needed to hold all the gears whilst allowing them to rotate freely, We decided to attach one gear directly to the servo which would then be held by the gripper case, this is shown in the image below.  
 
 ![Image of gripper structure](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/GripperStructure.PNG "Image of gripper structure")
+
+## Navigation
+[Project Introduction](https://github.com/AandJ/ROCO224/blob/master/ProjectIntroduction.md)  
+***
+__Arm Design__  
+***
+[Structural Analysis of Arm](https://github.com/AandJ/ROCO224/blob/master/ArmAnalysis.md)  
+***
+[To be added later](https://github.com/AandJ/ROCO224/blob/master/NAME.md)  
+***
+[To be added later](https://github.com/AandJ/ROCO224/blob/master/NAME.md)  
+

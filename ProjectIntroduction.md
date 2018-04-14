@@ -1,7 +1,7 @@
 # Project Introduction
 We decided to undertake the visual servoing tracking robot project, this is because we felt it would teach us skills that would become very useful in both out later education and later careers. The Goal of this task is to design and construct a robot and system that can be controlled to track a recognizable object (a face, a ball, a toy, ect) and follow it arround while it's in view of the camera.  
 
-To accomplish this goal we decided to make an arm with atleast 5 degrees of freedom, the arm will locate a ball determine its colour and put it in a corosponding container of the same colour. Once the searchable area is determined to be empty it will perform an action to show its task is complete. An extension on this project would be to re purpose this robot as a garbage collection robot that can seperate recyclable items and non recyclable items and put them in the corosponding bin.  
+To accomplish this goal we decided to make an arm that will locate a ball determine its colour and put it in a corosponding container of the same colour. Once the searchable area is determined to be empty it will perform an action to show its task is complete. An extension on this project would be to re purpose this robot as a garbage collection robot that can seperate recyclable items and non recyclable items and put them in the corosponding bin.  
 
 ## Navigation
 __Project Introduction__  

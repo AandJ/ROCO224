@@ -15,7 +15,7 @@ The 13 supports are identical rectangular beams which connect into the cutouts o
 Below is an screen shot of the assembled base in fusion 360.  
 
 <p align="center">
-![Image of BASE](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/Base.PNG "Image of BASE")
+![Image of BASE](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/Base.PNG "Image of BASE")  
 </p>
 
 ## Base rotation plate
@@ -23,7 +23,7 @@ Below is an screen shot of the assembled base in fusion 360.
 The base rotation plate sits above the base and is rotated by the servo fitted to the base, this then connects to the servos that move the first limb of the robot, since this component needs to connect to two servos we decided to 3D print as it would allows us a more complex shape.  
 
 <p align="center">
-![Image of base rotation plate](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/Base_ROTPlate.PNG "Image of base rotation plate")
+![Image of base rotation plate](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/Base_ROTPlate.PNG "Image of base rotation plate")  
 </p>
 
 ## 1st Limb
@@ -32,7 +32,7 @@ The first limb consists of 3 bodies, two large bodies and a structural support t
 The distance between the pivots for this limb is 195mm  
 
 <p align="center">
-![Image of 1st limb](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/LIMB1.PNG "Image of 1st limb")
+![Image of 1st limb](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/LIMB1.PNG "Image of 1st limb")  
 </p>
 
 ## 2nd Limb
@@ -49,13 +49,13 @@ The distance between the pivots for this limb is 186mm
 The gripper attacher connects to the end of the limb two and allows us to change the approach angle of the gripper.  
 
 <p align="center">
-![Image of gripper attacher](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/Gripper_Attacher.PNG "Image of gripper attacher")
+![Image of gripper attacher](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/Gripper_Attacher.PNG "Image of gripper attacher")  
 </p>
 
 The gripper attacher is also where the component holding the camera will be connected, for the camera we decided to re purpose one of the heads from the robot football players and utilise its built in camera for our visual tracking. The head that will be attached to this components is shown below.  
 
 <p align="center">
-![Image of HEAD](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/HEAD.PNG "Image of HEAD")
+![Image of HEAD](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/HEAD.PNG "Image of HEAD")  
 </p>
 
 ## Gripper
@@ -67,13 +67,13 @@ Due to the complexity of this components we had to 3D print.
 Below is an image of the rack and pinion system we designed in fusion.  
 
 <p align="center">
-![Image of rack and pinion](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/RackAndPinion.PNG "Image of rack and pinion")
+![Image of rack and pinion](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/RackAndPinion.PNG "Image of rack and pinion")  
 </p>
 
 this will be fitted to the main gripper case which will then attach to the gripper attacher. The gripper case needed to hold all the gears whilst allowing them to rotate freely, We decided to attach one gear directly to the servo which would then be held by the gripper case, this is shown in the image below.  
 
 <p align="center">
-![Image of gripper structure](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/GripperStructure.PNG "Image of gripper structure")
+![Image of gripper structure](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/GripperStructure.PNG "Image of gripper structure")  
 </p>
 
 ## Full Design

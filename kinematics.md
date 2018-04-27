@@ -6,12 +6,12 @@ Calculation of the Kinematics is essential for controlling the robot, the transf
 ## Transform functions
 To get the transform functions for our arm we used the Denavit–Hartenberg parameters.  
 <p align="center">
-![Image of maths](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/Transforms.PNG "Image of maths")  
+<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/Transforms.PNG"/>  
 </p>
 Now that we had our transform functions we wanted to check if these where correct, to do this we used the rvc (Robotics, Vision and Control) toolbox in MATLAB.  
 We did this by using the "link" type classification and the SerialLink command to describe our robots parameters, we then used SerialLink.plot and SerialLink.animate to create a graphical representation of our robots kinematics. This is shown below.  
 <p align="center">
-![GIF of Kinematic SIM](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/Matlab_Kinetic_sim.gif "GIF of Kinematic SIM")  
+<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/Matlab_Kinetic_sim.gif"/>  
 </p>
 
 ## Forward kinematics

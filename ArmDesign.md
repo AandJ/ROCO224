@@ -62,10 +62,10 @@ this will be fitted to the main gripper case which will then attach to the gripp
 
 ## Full Design
 
-<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/FULL.PNG"/> <img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/FULL_animated.gif "/>  
+<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/FULL.PNG"/> <img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/FULL_animated.gif" width="248"/>  
 
-![Image of designed arm](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/FULL.PNG "Image of designed arm") ![gif of designed arm](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/FULL_animated.gif "gif of designed arm")  
-
+gif 160x360
+img 248x668
 ## Navigation
 [Project Introduction](https://github.com/AandJ/ROCO224/blob/master/ProjectIntroduction.md)  
 ***

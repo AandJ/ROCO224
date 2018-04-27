@@ -62,7 +62,9 @@ this will be fitted to the main gripper case which will then attach to the gripp
 
 ## Full Design
 
-![Image of assembled arm](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/FULL.PNG "Image of assembled arm")
+<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/FULL.PNG"/> <img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/FULL_animated.gif "/>  
+
+![Image of designed arm](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/FULL.PNG "Image of designed arm") ![gif of designed arm](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/FULL_animated.gif "gif of designed arm")  
 
 ## Navigation
 [Project Introduction](https://github.com/AandJ/ROCO224/blob/master/ProjectIntroduction.md)  
@@ -71,7 +73,7 @@ __Arm Design__
 ***
 [Structural Analysis of Arm](https://github.com/AandJ/ROCO224/blob/master/ArmAnalysis.md)  
 ***
-[To be added later](https://github.com/AandJ/ROCO224/blob/master/NAME.md)  
+[Kinematics](https://github.com/AandJ/ROCO224/blob/master/kinematics.md)  
 ***
 [To be added later](https://github.com/AandJ/ROCO224/blob/master/NAME.md)  
 

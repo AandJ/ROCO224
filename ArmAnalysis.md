@@ -22,7 +22,7 @@ Using the free body diagrams we worked out the force that would act on the first
 Limb 1 will be under the most stress as it is has the most components connected above it, we calculated the maximum force to be 3.8543N and simulated this force on the design.  
 
 <p align="center">
-![Image of FEA on 1st limb](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/LIMB1_FEA.PNG "Image of FEA on 1st limb")  
+<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/LIMB1_FEA.PNG"/>  
 </p>
 
 We can see that our resulting safety factor was 2.41, this is marked as yellow in fusion however is safe for our design, this is because this means the limb will not break until 2.41 times the maximum load.  
@@ -32,7 +32,7 @@ We can see that our resulting safety factor was 2.41, this is marked as yellow i
 We calculated the maximum force on limb 2 to be 2.6212N and simulated this force on the design.  
 
 <p align="center">
-![Image of FEA on 2nd limb](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/LIMB2_FEA.PNG "Image of FEA on 2nd limb")  
+<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/LIMB2_FEA.PNG"/>  
 </p>
 
 We can see that our resulting safety factor was 15, which means the limb is safe for up to 15 times the maximum load which is easily within our desired boundaries. 
@@ -47,7 +47,7 @@ Our specification outlined what are arm needed to do, and now that we have confi
 From these we can confirm this design meets our requirements and can begin making and assembling the parts.  
 
 <p align="center">
-![Image of assembled arm](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/FULL_BUILT.PNG "Image of assembled arm")  
+<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/FULL_BUILT.PNG"/>  
 </p>
 
 ## Navigation

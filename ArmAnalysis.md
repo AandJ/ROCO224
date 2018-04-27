@@ -9,7 +9,7 @@ Now that the arm has been designed we will need to confirm whether this design m
 
 ## Torque
 
-To determine whether the arm would be able to provide enough torque we performed some calculation, we assumed the arm was straight out at 180 degrees (maximum perpendicular distance) and under load (holding ball), we then added the torque from each component from the end of the gripper to the servo we where checking if at any point this is greater than the holding torque specified in the data sheet 5.66 N.cm (Stall torque = 25.6 N.cm) we can conclude the arm will not function. To perform these calculation we needed to know the Component weights, these are shown below.  
+To determine whether the arm would be able to provide enough torque we performed some calculation, we assumed the arm was straight out at 180 degrees (maximum perpendicular distance) and under load (holding ball), we then added the torque from each component from the end of the gripper to the servo we where checking, if at any point this is greater than the holding torque specified in the data sheet 5.66 Kg.cm (Stall torque = 28.3Kg.cm) we can conclude the arm will strugle to function. To perform these calculation we needed to know the Components weights, these are shown below.  
 Servo = 76g ; Limb1 = 54.2g ; Limb2 w/M = 201.7gg ; GripperROT_Attacher = 12.2g ; HEAD = 43g : Gripper = 57g ; Ball = 3g  
 
 ## Structure (FEA)
@@ -21,7 +21,9 @@ Using the free body diagrams we worked out the force that would act on the first
 
 Limb 1 will be under the most stress as it is has the most components connected above it, we calculated the maximum force to be 3.8543N and simulated this force on the design.  
 
+<p align="center">
 ![Image of FEA on 1st limb](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/LIMB1_FEA.PNG "Image of FEA on 1st limb")  
+</p>
 
 We can see that our resulting safety factor was 2.41, this is marked as yellow in fusion however is safe for our design, this is because this means the limb will not break until 2.41 times the maximum load.  
 
@@ -29,7 +31,9 @@ We can see that our resulting safety factor was 2.41, this is marked as yellow i
 
 We calculated the maximum force on limb 2 to be 2.6212N and simulated this force on the design.  
 
+<p align="center">
 ![Image of FEA on 2nd limb](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/LIMB2_FEA.PNG "Image of FEA on 2nd limb")  
+</p>
 
 We can see that our resulting safety factor was 15, which means the limb is safe for up to 15 times the maximum load which is easily within our desired boundaries. 
 
@@ -42,16 +46,18 @@ Our specification outlined what are arm needed to do, and now that we have confi
 * Four  : The servo can provide enough torque to lift the arm :Confirmed above  
 From these we can confirm this design meets our requirements and can begin making and assembling the parts.  
 
+<p align="center">
 ![Image of assembled arm](https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/FULL_BUILT.PNG "Image of assembled arm")  
+</p>
 
 ## Navigation
 [Project Introduction](https://github.com/AandJ/ROCO224/blob/master/ProjectIntroduction.md)  
 ***
 [Arm Design](https://github.com/AandJ/ROCO224/blob/master/ArmDesign.md)  
 ***
-__Analysis of Arm Design__  
+__Analysis of Arm__  
 ***
-[kinematics of Arm](https://github.com/AandJ/ROCO224/blob/master/kinematics.md)  
+[Kinematics](https://github.com/AandJ/ROCO224/blob/master/kinematics.md)  
 ***
 [To be added later](https://github.com/AandJ/ROCO224/blob/master/NAME.md)  
 

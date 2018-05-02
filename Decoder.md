@@ -40,7 +40,6 @@ pub_Gripper = rospy.Publisher('Gripper_controller/command', Float64, queue_size=
 # Initialise ROS node and subscribe to /MATLAB topic
 rospy.init_node('decoder', anonymous=True)
 rospy.Subscriber('/MATLAB', Float64MultiArray, callback)
-```
 
 # Enter main loop
 if __name__ == '__main__':

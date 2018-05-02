@@ -47,7 +47,7 @@ Our specification outlined what are arm needed to do, and now that we have confi
 From these we can confirm this design meets our requirements and can begin making and assembling the parts.  
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/FULL_BUILT.PNG"/>  
+<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/FULL_BUILT.JPG"/>  
 </p>
 
 ## Navigation

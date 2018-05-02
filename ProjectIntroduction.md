@@ -10,7 +10,10 @@ __Project Introduction__
 ***
 [Structural Analysis of Arm](https://github.com/AandJ/ROCO224/blob/master/ArmAnalysis.md)  
 ***
-[To be added later](https://github.com/AandJ/ROCO224/blob/master/NAME.md)  
+[Kinematics](https://github.com/AandJ/ROCO224/blob/master/kinematics.md)  
 ***
-[To be added later](https://github.com/AandJ/ROCO224/blob/master/NAME.md)  
-
+[openCV](https://github.com/AandJ/ROCO224/blob/master/openCV.md)  
+***
+[DECODER](https://github.com/AandJ/ROCO224/blob/master/Decoder.md)  
+***
+[MATLAB](https://github.com/AandJ/ROCO224/blob/master/MATLAB.md)  

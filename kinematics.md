@@ -23,6 +23,7 @@ The inverse kinematics for our arm was made more complicated due to the design n
 <p align="center">
 <img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/Matlab_Rikine.PNG"/>  
 </p>
+
 ## Navigation
 [Project Introduction](https://github.com/AandJ/ROCO224/blob/master/ProjectIntroduction.md)  
 ***
@@ -30,7 +31,7 @@ The inverse kinematics for our arm was made more complicated due to the design n
 ***
 [Analysis of Arm](https://github.com/AandJ/ROCO224/blob/master/ArmAnalysis.md)  
 ***
-__Kinematics__
+__Kinematics__  
 ***
 [openCV](https://github.com/AandJ/ROCO224/blob/master/openCV.md)  
 ***

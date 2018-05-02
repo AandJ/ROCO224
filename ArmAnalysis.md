@@ -59,5 +59,9 @@ __Analysis of Arm__
 ***
 [Kinematics](https://github.com/AandJ/ROCO224/blob/master/kinematics.md)  
 ***
-[To be added later](https://github.com/AandJ/ROCO224/blob/master/NAME.md)  
+[openCV](https://github.com/AandJ/ROCO224/blob/master/openCV.md)  
+***
+[DECODER](https://github.com/AandJ/ROCO224/blob/master/Decoder.md)  
+***
+[MATLAB](https://github.com/AandJ/ROCO224/blob/master/MATLAB.md)  
 

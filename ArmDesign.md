@@ -73,7 +73,7 @@ Below is an image of the rack and pinion system we designed in fusion.
 this will be fitted to the main gripper case which will then attach to the gripper attacher. The gripper case needed to hold all the gears whilst allowing them to rotate freely, We decided to attach one gear directly to the servo which would then be held by the gripper case, this is shown in the image below.  
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/GripperStructure.PNG.PNG"/>  
+<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/GripperStructure.PNG"/>  
 </p>
 
 ## Full Design
@@ -97,5 +97,9 @@ __Arm Design__
 ***
 [Kinematics](https://github.com/AandJ/ROCO224/blob/master/kinematics.md)  
 ***
-[To be added later](https://github.com/AandJ/ROCO224/blob/master/NAME.md)  
+[openCV](https://github.com/AandJ/ROCO224/blob/master/openCV.md)  
+***
+[DECODER](https://github.com/AandJ/ROCO224/blob/master/Decoder.md)  
+***
+[MATLAB](https://github.com/AandJ/ROCO224/blob/master/MATLAB.md)  
 

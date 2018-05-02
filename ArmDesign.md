@@ -55,7 +55,7 @@ The gripper attacher connects to the end of the limb two and allows us to change
 The gripper attacher is also where the component holding the camera will be connected, for the camera we decided to re purpose one of the heads from the robot football players and utilise its built in camera for our visual tracking. The head that will be attached to this components is shown below.  
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/HEAD.PNG"/>
+<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/HEAD.JPG"/>
 </p>
 
 ## Gripper

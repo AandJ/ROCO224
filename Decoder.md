@@ -1,6 +1,7 @@
 # Decoder 
 
-Our code for the decoder needs to subscribe to the topic MATLAB publishes to and out put the each component of the array MATLAB publishes to the correct servo, in this version of the code we control every thing except the gripper.
+Our code for the decoder needs to subscribe to the topic MATLAB publishes to, this is so it can read the desired servo position MATLAB has calculated, it then sends these positions to the servo. We used this method because MATLAB takes a long time to output data to ROS and it was quicker for MATLAB to publish one array of 5 values than 5 individual values, this allows MATLAB to run faster whilst this node runs in the background sending each component of the array recieved from MATLAB to the necacary servos  
+
 ```python
 #!/usr/bin/env python
 
@@ -42,16 +43,6 @@ rospy.init_node('decoder', anonymous=True)
 rospy.Subscriber('/MATLAB', Float64MultiArray, callback)
 
 # Enter main loop
-if __name__ == '__main__':
-    main()
-
-# Initial joint values
-BASE = 0
-dual_motor = 0
-joint2 = 0
-GripperTilt = 0
-Gripper = 0
-
 if __name__ == '__main__':
     main()
 ```

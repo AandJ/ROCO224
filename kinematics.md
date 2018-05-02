@@ -25,6 +25,7 @@ The inverse kinematics for our arm was made more complicated due to the design n
 <p align="center">
 <img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/Matlab_Rikine.PNG"/>  
 </p>
+
 ### Inverse manipulator by optimisation without joint limits
 We also wanted to perform inverse kinematics whilst considering the rotational components, this would be used whilst iterating towards the ball. To do this we used the `SerialLink.ikunc(T, Q0, Options)` command which performs inverse kinematics with initial Joints "Q0" to the specified transform "T", We decided to use this command as we would be iterating with small increments. The use of this is discussed more in the MATLAB section on the function "TO_BALL()".  
 

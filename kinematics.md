@@ -19,7 +19,10 @@ To obtain the forward kinematics we need to times all the transform function tog
 This can be done in MATLAB using the "SerialLink.fkine" command. `FwrdKin = R.fkine(JOINTS);` would determine the position of the end effector for the joint states specified by the "JOINTS" variable.  
 
 ## Inverse kinematics
-
+The inverse kinematics for our arm was made more complicated due to the design not having a wrist, this meant the arm was under actuated and so its end effector Rx and Ry components were set by its position and could not be modified. To overcome this issue we used a MATLAB inverse kinematic solver that would mask out these components. The command we used was `SerialLink.ikine(q, options)` also called "Inverse kinematics by optimisation without joint limits" we used several of the options to get this to function for our design, the most important was the mask, this allowed us to mask the unnecessary components of the transform, we also used the options "verbose" "slimit" and "q0".
+<p align="center">
+<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/Matlab_Rikine.PNG"/>  
+</p>
 ## Navigation
 [Project Introduction](https://github.com/AandJ/ROCO224/blob/master/ProjectIntroduction.md)  
 ***
@@ -29,4 +32,8 @@ This can be done in MATLAB using the "SerialLink.fkine" command. `FwrdKin = R.fk
 ***
 __Kinematics__
 ***
-[To be added later](https://github.com/AandJ/ROCO224/blob/master/NAME.md)  
+[openCV](https://github.com/AandJ/ROCO224/blob/master/openCV.md)  
+***
+[DECODER](https://github.com/AandJ/ROCO224/blob/master/Decoder.md)  
+***
+[MATLAB](https://github.com/AandJ/ROCO224/blob/master/MATLAB.md)  

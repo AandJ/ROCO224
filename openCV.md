@@ -8,43 +8,13 @@ the first thing we must do is obtain an image from the camera on the arm and con
 ```python
 ## grab the current frame
 (grabbed, frame) = camera.read()
- 
-# re size the frame, blur it, and convert it to the HSV
-# colour space
-frame = imutils.resize(frame, width=600)
+
+# Blur the frame and convert it to the HSV color space
 blurred = cv2.GaussianBlur(frame, (11, 11), 0)
-HSV = cv2.cvtColor(blurred, cv2.COLOR_BGR2HSV) 
+HSV = cv2.cvtColor(blurred, cv2.COLOR_BGR2HSV)
 ```
-Now that we have the HSV image we need to mask out all the data we don't want, for this we need to find the range of the Hue, Saturation and Value values for our ball. To determine these we created slider which we could modify until we had a black and white image in which the ball was shown as white with the rest of the image blacked out. The code for this is shown below.  
-```python 
-# Create window for sliders
-cv2.namedWindow("trackbar window")
-
-# Create sliders for all values
-cv2.createTrackbar("Hmin","trackbar window",0,255,nothing)
-cv2.createTrackbar("Hmax","trackbar window",255,255,nothing)
-cv2.createTrackbar("Vmin","trackbar window",0,255,nothing)
-cv2.createTrackbar("Vmax","trackbar window",255,255,nothing)
-cv2.createTrackbar("Smin","trackbar window",0,255,nothing)
-cv2.createTrackbar("Smax","trackbar window",255,255,nothing)
-
-# Set values to current values on track bars
-HMIN = cv2.getTrackbarPos("Hmin","trackbar window")
-HMAX = cv2.getTrackbarPos("Hmax","trackbar window")
-VMIN = cv2.getTrackbarPos("Vmin","trackbar window")
-VMAX = cv2.getTrackbarPos("Vmax","trackbar window")
-SMIN = cv2.getTrackbarPos("Smin","trackbar window")
-SMAX = cv2.getTrackbarPos("Smax","trackbar window")
-
-# construct a mask for the colour then perform
-# a series of dilation's and erosion's to remove any small
-# blobs left in the mask
-mask = cv2.inRange(HSV, (HMIN, SMIN, VMIN), (HMAX, SMAX, VMAX))
-mask = cv2.erode(mask, None, iterations=2)
-mask = cv2.dilate(mask, None, iterations=2)
-```
-We modified these values while using an image of the red ball, once we had an image in which all except the ball was visible we saved the values, these were Hue range 0 to 10, Saturation range 180 to 255 and value range 180 to 255.   
-<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/MASKED_BALL.PNG"/>  
+Now that we have the HSV image we need to mask out all the data we don't want, for this we need to find the range of the Hue, Saturation and Value values for our ball. To determine these we created slider which we could modify until we had a black and white image in which the ball was shown as white with the rest of the image blacked out. We modified the slider values while using an image of the red ball as the input frame, once we had a masked image in which only the ball was visible we saved the values, these values were, Hue range 0 to 10, Saturation range 180 to 255 and value range 180 to 255. The masked result is shown below   
+<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/MASKEDBALL.png"/>  
 Now that we had the masked image we need to use one of openCVs tools to find the location of the ball in the image and send the (x,y) co-ordinates for the centre of the circle as well as its radius to MATLAB, to find the ball we use `cv2.findcontours()` and to send it to MATLAB we use ROS, the code is shown below.
 ```python
 # Search for red balls
@@ -77,6 +47,21 @@ if len(cnts_R) > 0:
 		pos.data = [x_R, y_R, radius_R]
 		pub_openCV.publish(pos)
 ``` 
+In this code you can see that we set the minimum radius of an object to be considered as the ball was 25 pixels, this stop our program from recognising small amounts of red as our ball as well as set a limit on what the arm would try and reach for.  
+
+# The Maths
+Now that we had the radius of the ball we could use this to obtain the distance from the camera to the ball, this is possible as we are using balls of a consistent size. We started by measuring the radius in pixels at set distances and plotting them.
+<p align="center">
+<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/openCVSpreadsheet.png"/> <img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/GraphOPENCV.png" height="496"/>  
+*Source : https://mycurvefit.com*  
+</p>
+We then used the websites equation generator to generate an equation that would approximately fit our graph, we multiplied the equation by 10 to convert from cm to mm, the result of this was.  
+<p align="center">
+<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/DistanceEQ.PNG"/>  
+*Source : https://mycurvefit.com*  
+</p>
+To test this we entered distance values greater than the ones we plotted and compared the result of the equation to the new measurements we took, we found the equation to be accurate to 1cm which we considered an acceptable margin of error.  
+We decided to apply this equation on MATLAB rather than in the python node.  
 
 ## Navigation
 [Project Introduction](https://github.com/AandJ/ROCO224/blob/master/ProjectIntroduction.md)  

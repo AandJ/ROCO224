@@ -52,13 +52,12 @@ In this code you can see that we set the minimum radius of an object to be consi
 # The Maths
 Now that we had the radius of the ball we could use this to obtain the distance from the camera to the ball, this is possible as we are using balls of a consistent size. We started by measuring the radius in pixels at set distances and plotting them.
 <p align="center">
-<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/openCVSpreadsheet.png"/> <img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/GraphOPENCV.png" height="496"/>  
-*Source : https://mycurvefit.com*  
+<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/openCVSpreadsheet.png"  height="318"/> <img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/GraphOPENCV.png"/>  
+_Source : https://mycurvefit.com_  
 </p>
 We then used the websites equation generator to generate an equation that would approximately fit our graph, we multiplied the equation by 10 to convert from cm to mm, the result of this was.  
 <p align="center">
 <img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/DistanceEQ.PNG"/>  
-*Source : https://mycurvefit.com*  
 </p>
 To test this we entered distance values greater than the ones we plotted and compared the result of the equation to the new measurements we took, we found the equation to be accurate to 1cm which we considered an acceptable margin of error.  
 We decided to apply this equation on MATLAB rather than in the python node.  

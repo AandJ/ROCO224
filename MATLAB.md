@@ -1,8 +1,11 @@
 # MATLAB
 
 ## TO_BALL function
-We needed a way to approach the ball whilst tracking it, to do this we iterate towards the ball by simply observing it with the camera and using the values fed back from openCV (The x,y and radius of the ball) to move either left or right and up or down until we were looking at the ball. To move left and right we either incremented or decremented the value sent to the servo for base rotation, to move up and down we simply changed the value for Gripper Tilt. once the balls center was withing a 50 pixel large area around the center of the camera we performed forward kinematics, we then incremented the X component of this Transform which told our arm to move the gripper in the way it was facing, to do the inverse kinematics for the new position we used the command we talked about in the section on kinematics (the `SerialLink.ikunc(T, Q0, Options)` command). This allowed us to have our gripper approach the ball, it would continue to poll the X and Y co ordinate of the ball to see if it left the 50 pixel area and would re align if it did, once the radius of the ball exceeded 140 pixels, calculated to be approx ??M, the gripper would stop and move on to the next section.  
-We put this process in a function called TO_BALL(), this is shown below.  
+We needed a way to approach the ball, for this we needed a way to know where the ball is relative to the arm. We wrote a function that subscribed to the openCV topic to read the x y position of the ball and its radius, we then converted the radius to distance using the equation.  
+<p align="center">
+<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/DistanceEQ.PNG"/>  
+</p>
+We took the x and y position and checked to see if they were greater or less than 0, for x_off we modified the base servo position until it was within a 50 pixel region along the x axis in the frame, we then modified the Gripper tilt until the ball was withing a 50 pixel region on the y axis in the frame. Now we had to approach the ball, to do this we used the distance value and created a transform from the gripper to the ball, in this transform we accounted for the offsets from the camera to the gripper, we then performed forward kinematics to get the transform from the base to the gripper and multiplied this by our transform from the gripper to the ball, we then used our non masked inverse kinematic solver to obtain the joint positions to achieve this new end effector position.  
 <p align="left">
 <img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/MATLAB_TO_BALL_1.png"/>  
 <img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/MATLAB_TO_BALL_2.png"/>  

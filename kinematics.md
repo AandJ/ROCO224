@@ -1,6 +1,6 @@
 # Kinematics of Arm
 
-## Introduction
+## Introductions
 Calculation of the Kinematics is essential for controlling the robot, the transform functions describe the relationship between the frames for each LINK, these can then be used in the forward kinematics which allows us to work out the exact position and orientation of the end effector. The inverse kinematics is the most use full allowing us to calculate the needed joint angles to put the end effector in a specific position.  
 
 ## Transform functions
@@ -15,8 +15,13 @@ We did this by using the "link" type classification and the SerialLink command t
 </p>
 
 ## Forward kinematics
-To obtain the forward kinematics we need to times all the transform function together, this allows us to work out the position of the end effector frame at the current joint positions.
-This can be done in MATLAB using the "SerialLink.fkine" command. `FwrdKin = R.fkine(JOINTS);` would determine the position of the end effector for the joint states specified by the "JOINTS" variable.  
+To obtain the forward kinematics we need to times all the transform function together, this allows us to work out the position of the end effector frame at the current joint positions. To do this we times together the transform functions. This however can be long and tedious to do, this is why we use one of the MATLAB commands to perform the forward kinematics for us, this is the "SerialLink.fkine" command. `FwrdKin = R.fkine(JOINTS);` would determine the position of the end effector for the joint states specified by the "JOINTS" variable. We decided to test this command by inputting the joint states into the matrix we calculated by multiply our transform function and comparing the result to that of the MATLAB commands.  
+<p align="center">
+<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/FWRDKIN_1.png"/>  
+This left us the results  
+<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/FWRDKIN_2.png"/>  
+</p>
+From this we can see the results we calculated are the same as the result from using the MATLAB command.  
 
 ## Inverse kinematics - Inverse kinematics by optimisation without joint limits
 We wanted to perform Inverse kinematics so that our arm can move to a specific position.  
@@ -34,7 +39,7 @@ The inverse kinematics for our arm was made more complicated due to the design n
 ***
 __Kinematics__  
 ***
-[openCV](https://github.com/AandJ/ROCO224/blob/master/openCV.md)  
+[openCV - object tracking](https://github.com/AandJ/ROCO224/blob/master/openCV.md)  
 ***
 [DECODER](https://github.com/AandJ/ROCO224/blob/master/Decoder.md)  
 ***

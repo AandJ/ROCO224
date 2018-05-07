@@ -17,7 +17,39 @@ Now that we have the HSV image we need to mask out all the data we don't want, f
 <p align="center">
 <img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/MASKEDBALL.png"/>  
 </p>
-Now that we had the masked image we need to use one of openCVs tools to find the location of the ball in the image and send the (x,y) co-ordinates for the centre of the circle as well as its radius to MATLAB, to find the ball we use `cv2.findcontours()` and to send it to MATLAB we use ROS, the code is shown below.  
+Now that we had the masked image we need to use one of openCVs tools to find the location of the ball in the image and send the (x,y) co-ordinates for the centre of the circle as well as its radius to MATLAB, to find the ball we use `cv2.findcontours()` and to send it to MATLAB we use ROS, the code is shown below.
+
+```python
+# Search for red balls
+
+# find contours in the mask and initialize the current
+# (x, y) center of the ball
+cnts_R = cv2.findContours(mask_R.copy(), cv2.RETR_EXTERNAL,
+	cv2.CHAIN_APPROX_SIMPLE)[-2]
+center_R = None
+ 	
+# only proceed if at least one contour was found
+if len(cnts_R) > 0:
+	# find the largest contour in the mask, then use
+	# it to compute the minimum enclosing circle and
+	# centroid
+	c_R = max(cnts_R, key=cv2.contourArea)
+	((x_R, y_R), radius_R) = cv2.minEnclosingCircle(c_R)
+	M_R = cv2.moments(c_R)
+	center_R = (int(M_R["m10"] / M_R["m00"]), int(M_R["m01"] / M_R["m00"]))
+ 
+	# only proceed if the radius meets a minimum size
+	if radius_R > 25:
+		# draw the circle and centroid on the frame
+		# then update the list of tracked points
+		cv2.circle(frame, (int(x_R), int(y_R)), int(radius_R),
+			(0, 255, 255), 2)
+		cv2.circle(frame, center_R, 5, (0, 0, 255), -1)
+		print "X =", x_R, "    Y =", y_R, "    radius =", radius_R
+		pos = Float64MultiArray()			
+		pos.data = [x_R, y_R, radius_R]
+		pub_openCV.publish(pos)
+```
 
 In this code you can see that we set the minimum radius of an object to be considered as the ball was 25 pixels, this stop our program from recognising small amounts of red as our ball as well as set a limit on what the arm would try and reach for.  
 

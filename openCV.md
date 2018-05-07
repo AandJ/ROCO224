@@ -12,9 +12,11 @@ the first thing we must do is obtain an image from the camera on the arm and con
 # Blur the frame and convert it to the HSV color space
 blurred = cv2.GaussianBlur(frame, (11, 11), 0)
 HSV = cv2.cvtColor(blurred, cv2.COLOR_BGR2HSV)
-```
+```  
 Now that we have the HSV image we need to mask out all the data we don't want, for this we need to find the range of the Hue, Saturation and Value values for our ball. To determine these we created slider which we could modify until we had a black and white image in which the ball was shown as white with the rest of the image blacked out. We modified the slider values while using an image of the red ball as the input frame, once we had a masked image in which only the ball was visible we saved the values, these values were, Hue range 0 to 10, Saturation range 180 to 255 and value range 180 to 255. The masked result is shown below   
+<p align="center">
 <img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/MASKEDBALL.png"/>  
+</p>
 Now that we had the masked image we need to use one of openCVs tools to find the location of the ball in the image and send the (x,y) co-ordinates for the centre of the circle as well as its radius to MATLAB, to find the ball we use `cv2.findcontours()` and to send it to MATLAB we use ROS, the code is shown below.
 ```python
 # Search for red balls
@@ -46,14 +48,14 @@ if len(cnts_R) > 0:
 		pos = Float64MultiArray()			
 		pos.data = [x_R, y_R, radius_R]
 		pub_openCV.publish(pos)
-``` 
+```  
 In this code you can see that we set the minimum radius of an object to be considered as the ball was 25 pixels, this stop our program from recognising small amounts of red as our ball as well as set a limit on what the arm would try and reach for.  
 
 # The Maths
 Now that we had the radius of the ball we could use this to obtain the distance from the camera to the ball, this is possible as we are using balls of a consistent size. We started by measuring the radius in pixels at set distances and plotting them.
 <p align="center">
-<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/openCVSpreadsheet.png"  height="318"/> <img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/GraphOPENCV.png"/>  
-_Source : https://mycurvefit.com_  
+<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/openCVSpreadsheet.png"  height="330"/> <img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/GraphOPENCV.png" height="330"/>  
+Source : https://mycurvefit.com  
 </p>
 We then used the websites equation generator to generate an equation that would approximately fit our graph, we multiplied the equation by 10 to convert from cm to mm, the result of this was.  
 <p align="center">

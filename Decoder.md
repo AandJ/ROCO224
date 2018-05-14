@@ -1,6 +1,8 @@
 # Decoder 
 
-Our code for the decoder needs to subscribe to the topic MATLAB publishes to, this is so it can read the desired servo position MATLAB has calculated, it then sends these positions to the servo. We used this method because MATLAB takes a long time to output data to ROS and it was quicker for MATLAB to publish one array of 5 values than 5 individual values, this allows MATLAB to run faster whilst this node runs in the background sending each component of the array recieved from MATLAB to the necacary servos  
+## The code
+
+Our code for the decoder needs to subscribe to the topic MATLAB publishes to, this is so it can read the desired servo position MATLAB has calculated, it then sends these positions to the servo. We used this method because MATLAB takes a long time to output data to ROS and it was quicker for MATLAB to publish one array of 5 values than 5 individual values, this allows MATLAB to run faster whilst this node runs in the background sending each component of the array received from MATLAB to the necessary servos  
 
 ```python
 #!/usr/bin/env python
@@ -18,7 +20,7 @@ def callback(data):
 	dual_motor = JOINT[1]
 	joint2 = JOINT[2]
 	GripperTilt = JOINT[3]
-	Gripper = 0
+	Gripper = JOINT[4]
 
 	pub_BASE.publish(BASE)
 	pub_dual_motor.publish(dual_motor)
@@ -32,11 +34,13 @@ def main():
 		rospy.spin()
 
 # Set up ROS publishers
-pub_BASE = rospy.Publisher('BASE_controller/command', Float64, queue_size=1)
-pub_dual_motor = rospy.Publisher('dual_motor_controller/command', Float64, queue_size=1)
-pub_joint2 = rospy.Publisher('joint2_controller/command', Float64, queue_size=1)
-pub_GripperTilt = rospy.Publisher('GripperTilt_controller/command', Float64, queue_size=1)
-pub_Gripper = rospy.Publisher('Gripper_controller/command', Float64, queue_size=1)
+
+#Note test with que size 0
+pub_BASE = rospy.Publisher('BASE_controller/command', Float64, queue_size=0)
+pub_dual_motor = rospy.Publisher('dual_motor_controller/command', Float64, queue_size=0)
+pub_joint2 = rospy.Publisher('joint2_controller/command', Float64, queue_size=0)
+pub_GripperTilt = rospy.Publisher('GripperTilt_controller/command', Float64, queue_size=0)
+pub_Gripper = rospy.Publisher('Gripper_controller/command', Float64, queue_size=0)
 
 # Initialise ROS node and subscribe to /MATLAB topic
 rospy.init_node('decoder', anonymous=True)
@@ -47,6 +51,9 @@ if __name__ == '__main__':
     main()
 ```
 
+## Possible Improvements
+A modification we could have made to improve this node would have been to add a feature where the node publishes data back to MATLAB to confirm that values had been received, this would have solved an issue we found in MATLAB where data was not always published as we could resend data if the decoder node did not respond.  
+
 ## Navigation
 [Project Introduction](https://github.com/AandJ/ROCO224/blob/master/ProjectIntroduction.md)  
 ***
@@ -56,9 +63,11 @@ if __name__ == '__main__':
 ***
 [Kinematics](https://github.com/AandJ/ROCO224/blob/master/kinematics.md)  
 ***
-[openCV](https://github.com/AandJ/ROCO224/blob/master/openCV.md)  
+[openCV - object tracking](https://github.com/AandJ/ROCO224/blob/master/openCV.md)  
 ***
 __DECODER__
 ***
 [MATLAB](https://github.com/AandJ/ROCO224/blob/master/MATLAB.md)  
+***
+[Visual Components Simulation](https://github.com/AandJ/ROCO224/blob/master/VCS.md)  
 

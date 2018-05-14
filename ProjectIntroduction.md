@@ -8,12 +8,14 @@ __Project Introduction__
 ***
 [Arm Design](https://github.com/AandJ/ROCO224/blob/master/ArmDesign.md)  
 ***
-[Structural Analysis of Arm](https://github.com/AandJ/ROCO224/blob/master/ArmAnalysis.md)  
+[Analysis of Arm](https://github.com/AandJ/ROCO224/blob/master/ArmAnalysis.md)  
 ***
 [Kinematics](https://github.com/AandJ/ROCO224/blob/master/kinematics.md)  
 ***
-[openCV](https://github.com/AandJ/ROCO224/blob/master/openCV.md)  
+[openCV - object tracking](https://github.com/AandJ/ROCO224/blob/master/openCV.md)  
 ***
 [DECODER](https://github.com/AandJ/ROCO224/blob/master/Decoder.md)  
 ***
 [MATLAB](https://github.com/AandJ/ROCO224/blob/master/MATLAB.md)  
+***
+[Visual Components Simulation](https://github.com/AandJ/ROCO224/blob/master/VCS.md)  

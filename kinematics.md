@@ -18,7 +18,9 @@ We did this by using the "link" type classification and the SerialLink command t
 To obtain the forward kinematics we need to times all the transform function together, this allows us to work out the position of the end effector frame at the current joint positions. To do this we times together the transform functions. This however can be long and tedious to do, this is why we use one of the MATLAB commands to perform the forward kinematics for us, this is the "SerialLink.fkine" command. `FwrdKin = R.fkine(JOINTS);` would determine the position of the end effector for the joint states specified by the "JOINTS" variable. We decided to test this command by inputting the joint states into the matrix we calculated by multiply our transform function and comparing the result to that of the MATLAB commands.  
 <p align="center">
 <img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/FWRDKIN_1.png"/>  
+
 This left us the results  
+
 <img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/FWRDKIN_2.png"/>  
 </p>
 From this we can see the results we calculated are the same as the result from using the MATLAB command.  
@@ -41,6 +43,6 @@ __Kinematics__
 ***
 [openCV - object tracking](https://github.com/AandJ/ROCO224/blob/master/openCV.md)  
 ***
-[DECODER](https://github.com/AandJ/ROCO224/blob/master/Decoder.md)  
-***
 [MATLAB](https://github.com/AandJ/ROCO224/blob/master/MATLAB.md)  
+***
+[Visual Components Simulation](https://github.com/AandJ/ROCO224/blob/master/VCS.md)  

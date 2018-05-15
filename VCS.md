@@ -20,8 +20,9 @@ A problem we experienced was due to the limited reach of the arm where the arm m
 
 We were unable to snap the blocks to the board due to the board’s studs did not align up with the bottom of the blocks. Therefore, to set the starting position we aligned the blocks to the board using the aligning tool and moved the into the correct position.  
 
-
-
+<p align="center">
+<img src="https://user-images.githubusercontent.com/32440660/40085523-acf4d702-5892-11e8-87fd-36319d3a04fd.png" height="200"/> <img src="https://user-images.githubusercontent.com/32440660/40085952-38bb41ee-5894-11e8-89cc-482f7b49b678.JPG" height="200"/>
+</p>
 
 
 
@@ -30,7 +31,12 @@ We were unable to snap the blocks to the board due to the board’s studs did no
 
 We were able to program the arm to simulate moving all the blocks from initial position 10 to final position 1, passing through the gate at the same height each time. We managed this through calling set sequences from the main sequence which were programmed with the gate pass positions, one sequence for each direction. We snapped the gripper to the blocks and set the position in the code and then moved the arm along its Cartesian axis to get the position ‘Block1’ and ‘Block1Up’. We then closed the gripping after the snapped position by setting the output to ‘OUT[1] == True’.  
 
-
+<p align="center">
+<img src="https://user-images.githubusercontent.com/32440660/40086144-0a77d936-5895-11e8-9160-f53d02a27fa1.JPG" height="200"/> <img src="https://user-images.githubusercontent.com/32440660/40086191-354756b4-5895-11e8-9cc8-1c33a8308c9e.JPG" height="200"/>
+</p>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/32440660/40086243-7a5e2962-5895-11e8-89cd-5cd645036fa9.JPG" height="200"/>
+</p>
 
 
 

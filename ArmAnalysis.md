@@ -16,7 +16,7 @@ We the drew the free body diagrams of our limbs, these are shown below.
 <p align="center">
 <img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/freebodydiagrams.png.png"/>  
 </p>
-The FBD for limb2 contains limb2, the gripper and the head. The calculations for this show that the servos max torque is 6.55Kg.cm, this is greater than the holding torque of 5.66Kg.cm however we deemed this acceptable as it is unlikely the arm will remain in its highest load configuration for prolonged periods of time. The maximum torque calculated for limb1 was far greater this is because all the weight that acted on limb2 also act on limb1 but at a greater distance, the max torque was calculated to be 13.94Kg.cm which is more than double our holding torque, this is why we decided to use two motors and a dual motor controller to operate limb1, this meant the torque was effectivly halved to 6.97Kg.cm we also deemed this to be acceptable as the arm is unlikely the arm will remain in its highest load configuration for prolonged periods of time.  
+The FBD for limb2 contains limb2, the gripper and the head. The calculations for this show that the servos max torque is 6.55Kg.cm, this is greater than the holding torque of 5.66Kg.cm however we deemed this acceptable as it is unlikely the arm will remain in its highest load configuration for prolonged periods of time. The maximum torque calculated for limb1 was far greater this is because all the weight that acted on limb2 also act on limb1 but at a greater distance, the max torque was calculated to be 13.94Kg.cm which is more than double our holding torque, this is why we decided to use two motors and a dual motor controller to operate limb1, this meant the torque was effectively halved to 6.97Kg.cm we also deemed this to be acceptable as the arm is unlikely the arm will remain in its highest load configuration for prolonged periods of time.  
 
 Despite the maximum torque on both the servos for limb1 and limb2 exceeding the holding torque, the arm will still be able to reach all positions as at no point is the stall toque exceeded. The main downside to this however is that not all position can be held for long periods of time as the servos will begin to overheat.  
 ## Structure (FEA)
@@ -71,6 +71,8 @@ __Analysis of Arm__
 [DECODER](https://github.com/AandJ/ROCO224/blob/master/Decoder.md)  
 ***
 [MATLAB](https://github.com/AandJ/ROCO224/blob/master/MATLAB.md)  
+***
+[Testing](https://github.com/AandJ/ROCO224/blob/master/Testing.md)  
 ***
 [Visual Components Simulation](https://github.com/AandJ/ROCO224/blob/master/VCS.md)  
 

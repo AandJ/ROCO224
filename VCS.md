@@ -50,3 +50,22 @@ https://www.youtube.com/watch?v=xyaX2PG_Lb8&feature=youtu.be
 
 In conclusion despite the issues we encountered due the restriction of the arm’s range, which lead to changing our original starting and finishing position, we were able to solve all the problems encountered in order to complete the tasks. Using visual components, we programmed the arm using multiple sequences and the snap and alignment tools so that the code was effective as possible. We used MELFA basic to program the real arm while also using the teach pendent to set specific joint positions we needed. Overall, we familiarised ourselves with both the real and virtual arm and used both programming methods to complete both tasks.  
 
+## Navigation
+[Project Introduction](https://github.com/AandJ/ROCO224/blob/master/ProjectIntroduction.md)  
+***
+[Arm Design](https://github.com/AandJ/ROCO224/blob/master/ArmDesign.md)  
+***
+[Analysis of Arm](https://github.com/AandJ/ROCO224/blob/master/ArmAnalysis.md)  
+***
+[Kinematics](https://github.com/AandJ/ROCO224/blob/master/kinematics.md)  
+***
+[openCV - object tracking](https://github.com/AandJ/ROCO224/blob/master/openCV.md)  
+***
+[DECODER](https://github.com/AandJ/ROCO224/blob/master/Decoder.md)  
+***
+[MATLAB](https://github.com/AandJ/ROCO224/blob/master/MATLAB.md)  
+***
+[Testing](https://github.com/AandJ/ROCO224/blob/master/Testing.md)  
+***
+__Visual Components Simulation__  
+

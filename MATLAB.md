@@ -52,6 +52,10 @@ We then entered the TO_BALL() function which had our arm track the red balls and
 </p>
 [Link to code](https://github.com/AandJ/ROCO224/blob/master/CODE/MATLAB/ARM_CONTROL.m)  
 
+## Video
+Now that we had all the necasary code we could test our arm, we decided to test with two balls as this would confirm that the code was repeatable and could handle a situation were multiple balls were detected.  
+<a href="https://www.youtube.com/watch?v=JnmU-MjMiM0" target="_blank"><img src="http://img.youtube.com/vi/JnmU-MjMiM0/0.jpg" alt="Test of arm" width="640" height="360" border="0" /></a>  
+
 ## Navigation
 [Project Introduction](https://github.com/AandJ/ROCO224/blob/master/ProjectIntroduction.md)  
 ***

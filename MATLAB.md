@@ -80,4 +80,6 @@ Now that we had all the necasary code we could test our arm, we decided to test 
 ***
 __MATLAB__  
 ***
+[Testing](https://github.com/AandJ/ROCO224/blob/master/Testing.md)  
+***
 [Visual Components Simulation](https://github.com/AandJ/ROCO224/blob/master/VCS.md)  

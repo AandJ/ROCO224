@@ -10,8 +10,13 @@ Now that the arm has been designed we will need to confirm whether this design m
 ## Torque
 
 To determine whether the arm would be able to provide enough torque we performed some calculation, we assumed the arm was straight out at 180 degrees (maximum perpendicular distance) and under load (holding ball), we then added the torque from each component from the end of the gripper to the servo we where checking, if at any point this is greater than the holding torque specified in the data sheet 5.66 Kg.cm (Stall torque = 28.3Kg.cm) we can conclude the arm will strugle to function. To perform these calculation we needed to know the Components weights, these are shown below.  
-Servo = 76g ; Limb1 = 54.2g ; Limb2 w/M = 201.7gg ; GripperROT_Attacher = 12.2g ; HEAD = 43g : Gripper = 57g ; Ball = 3g  
+Servo = 76g ; Limb1 = 54.2g ; Limb2 w/M = 201.7g ; GripperROT_Attacher = 12.2g ; HEAD = 43g : Gripper = 57g ; Ball = 3g  
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/AandJ/ROCO224/master/IMAGES/freebodydiagrams.png.png"/>  
+</p>
+
+The free body diagram the Links represent the arms, link 2 contains both the second limb and the gripper. The calculation shows that the servos holding torque has been exceeded however this is acceptable as they will not be under the maximum torque for a prolonged period of time, also the torque for link 1 will be halfed as the lower limb is supported by 2 servos which would divide the load. 
 ## Structure (FEA)
 
 To determine whether the design is structurally sound we performed FEA (Finite Element Analysis) on the limbs within fusion 360.  

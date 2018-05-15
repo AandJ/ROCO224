@@ -43,6 +43,8 @@ __Kinematics__
 ***
 [openCV - object tracking](https://github.com/AandJ/ROCO224/blob/master/openCV.md)  
 ***
+[DECODER](https://github.com/AandJ/ROCO224/blob/master/Decoder.md)  
+***
 [MATLAB](https://github.com/AandJ/ROCO224/blob/master/MATLAB.md)  
 ***
 [Testing](https://github.com/AandJ/ROCO224/blob/master/Testing.md)  

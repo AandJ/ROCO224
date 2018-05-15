@@ -36,12 +36,13 @@ We were able to program the arm to simulate moving all the blocks from initial p
 </p>
 <p align="center">
 <img src="https://user-images.githubusercontent.com/32440660/40086243-7a5e2962-5895-11e8-89cd-5cd645036fa9.JPG" height="200"/>
-</p>
+</p>   
+
+An error we encountered was the arm simulating an unprogrammed movement in the middle of our sequence which we believe is due to the arm not being able to move to the blocks position directly from where it was. This is most likely due to there being a point of singularity between the two programmed positions, so the arm diverts itself around to the block. The sequence still fulfills its task but with an unexpected movement.  
+
 <p align="center">
 <img src="https://user-images.githubusercontent.com/32440660/40086347-ee4b693e-5895-11e8-8587-4edcefe06fcf.gif" height="300"/>
 </p>  
-
-An error we encountered was the arm simulating an unprogrammed movement in the middle of our sequence which we believe is due to the arm not being able to move to the blocks position directly from where it was. This is most likely due to there being a point of singularity between the two programmed positions, so the arm diverts itself around to the block. The sequence still fulfills its task but with an unexpected movement.  
 
 https://www.youtube.com/watch?v=xyaX2PG_Lb8&feature=youtu.be  
 
